@@ -36,10 +36,10 @@ def test_search(driver, go_to_page):
     search_box.send_keys("Playwright", Keys.ENTER)
 
     WebDriverWait(driver, 10).until(
-        EC.presence_of_element_located((By.CSS_SELECTOR, "article"))
+        EC.presence_of_element_located((By.XPATH, "//article"))
     )
 
-    results = driver.find_elements(By.CSS_SELECTOR, "article")
+    results = driver.find_elements(By.XPATH, "//article")
 
     assert len(results) > 0
     time.sleep(2)
