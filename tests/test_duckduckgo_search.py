@@ -12,8 +12,6 @@ from selenium.webdriver.support.wait import WebDriverWait
 from webdriver_manager.chrome import ChromeDriverManager
 
 
-
-
 @pytest.fixture
 def driver():
     options = Options()
@@ -24,7 +22,6 @@ def driver():
     driver = webdriver.Chrome(service=service, options=options)
     yield driver
     driver.quit()
-
 
 
 def test_search(driver):
