@@ -32,5 +32,6 @@ def test_search(driver, go_to_page):
     search_box = driver.find_element(By.ID, "searchbox_input")
     search_box.send_keys("Playwright", Keys.ENTER)
     results = driver.find_elements(By.CSS_SELECTOR, "article")
+
     assert len(results) > 0
     time.sleep(2)
