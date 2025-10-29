@@ -25,13 +25,10 @@ def driver():
     yield driver
     driver.quit()
 
-@pytest.fixture
-def go_to_page(driver):
+
+def test_search(driver):
+
     driver.get("https://duckduckgo.com")
-
-
-
-def test_search(driver, go_to_page):
     search_box = driver.find_element(By.ID, "searchbox_input")
     search_box.send_keys("Playwright", Keys.ENTER)
 
