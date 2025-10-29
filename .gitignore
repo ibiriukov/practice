@@ -1,0 +1,30 @@
+# Python
+__pycache__/
+*.py[cod]
+*.egg
+*.egg-info/
+dist/
+build/
+.env
+
+# Pytest
+.cache/
+pytest.ini
+
+# WebDriver logs
+chromedriver.log
+
+# IDEs
+.vscode/
+.idea/
+*.sublime-project
+*.sublime-workspace
+
+# OS-specific
+.DS_Store
+Thumbs.db
+
+# GitHub Actions
+*.log
+*.coverage
+htmlcov/
